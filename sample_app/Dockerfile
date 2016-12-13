@@ -7,4 +7,4 @@ COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
 COPY .gemrc /app/.gemrc
 RUN bundle install
-ADD . /app
+COPY . /app
