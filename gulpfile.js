@@ -1,10 +1,9 @@
 'use strict';
 
-var HTML_SRC  = './**/*.html';
-var HTML_DEST = './';
-var SCSS_SRC  = './assets/stylesheets/**/*.scss';
-var CSS_SRC   = './css/**/*.css';
-var CSS_DEST  = './css/';
+var HTML_SRC  = './rails/**/*.html';
+var SCSS_SRC  = './rails/assets/stylesheets/**/*.scss';
+var CSS_SRC   = './rails/css/**/*.css';
+var CSS_DEST  = './rails/css/';
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
