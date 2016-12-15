@@ -26,7 +26,7 @@ gulp.task('scss-lint', function(){
 
 // scss-watch
 gulp.task('scss:watch', function(){
-  var watcher = gulp.watch(SCSS_SRC, ['scss-lint', 'sass']);
+  var watcher = gulp.watch(SCSS_SRC, ['scss-lint']);
   watcher.on('change', function(event) {
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
   });
