@@ -1,30 +1,19 @@
 'use strict';
 
-var HTML_SRC  = './sample_app/**/*.html';
-var SCSS_SRC  = './sample_app/assets/stylesheets/**/*.scss';
-var CSS_SRC   = './sample_app/css/**/*.css';
-var CSS_DEST  = './sample_app/css/';
+var HAML_SRC  = './sample_app/app/views/**/*.haml';
+var SCSS_SRC  = './sample_app/app/assets/stylesheets/**/*.scss';
 
 var gulp = require('gulp');
-var sass = require('gulp-sass');
 var scsslint = require('gulp-scss-lint');
 var bs = require('browser-sync').create();
 
 // browser-sync
 gulp.task('bs', function(){
   var bsOptions = {};
-  bsOptions.files = [HTML_SRC, CSS_SRC];
+  bsOptions.files = [HAML_SRC, SCSS_SRC];
   bsOptions.proxy = 'localhost';
   bsOptions.port  = 3001;
   bs.init(bsOptions);
-});
-
-
-// SCSS
-gulp.task('sass', function(){
-  return gulp.src(SCSS_SRC)
-    .pipe(sass.sync().on('error', sass.logError))
-    .pipe(gulp.dest(CSS_DEST));
 });
 
 
@@ -37,7 +26,7 @@ gulp.task('scss-lint', function(){
 
 // scss-watch
 gulp.task('scss:watch', function(){
-  var watcher = gulp.watch(SCSS_SRC, ['scss-lint', 'sass']);
+  var watcher = gulp.watch(SCSS_SRC, ['scss-lint']);
   watcher.on('change', function(event) {
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
   });

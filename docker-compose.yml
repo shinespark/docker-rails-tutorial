@@ -8,6 +8,8 @@ services:
       - MYSQL_USER=mysql
       - MYSQL_PASSWORD=password
       - MYSQL_ROOT_PASSWORD=password
+    ports:
+      - '3306:3306'
     volumes:
       - ./data/mysql:/var/lib/mysql
   nginx:

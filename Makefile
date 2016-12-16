@@ -1,9 +1,9 @@
 up:
-	rm -rf ./rails/tmp/
+	rm -rfv ./sample_app/tmp/
 	docker-compose build && docker-compose up
 
-crean:
-	rm -rf ./rails/tmp/
+clean:
+	rm -rfv ./sample_app/tmp/
 
 db_clean:
-	rm -rf ./data/mysql/*
+	rm -rfv ./data/mysql/*
