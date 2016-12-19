@@ -5,5 +5,8 @@ up:
 clean:
 	rm -rfv ./sample_app/tmp/
 
-db_clean:
-	rm -rfv ./data/mysql/*
+db_migrate:
+	docker-compose exec rails rake db:migrate
+
+db_reset:
+	docker-compose exec rails rake db:migrate:reset
