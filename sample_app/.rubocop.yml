@@ -1,0 +1,31 @@
+Rails:
+  Enabled: true
+
+# Limit lines to 80 characters.
+Metrics/LineLength:
+  Enabled: false
+# Can non-ascii comments.
+Style/AsciiComments:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/ColonMethodCall:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/EmptyLinesAroundAccessModifier:
+  Enabled: false
+Style/EmptyLinesAroundBlockBody:
+  Enabled: false
+Style/EmptyLinesAroundClassBody:
+  Enabled: false
+Style/EmptyMethod:
+  Enabled: false
+Style/NumericLiterals:
+  Enabled: false
+Style/PercentLiteralDelimiters:
+  Enabled: false
+Style/PredicateName:
+  Enabled: false
+Style/StringLiterals:
+  Enabled: false
