@@ -6,5 +6,5 @@ WORKDIR /app
 COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
 COPY .gemrc /app/.gemrc
-RUN bundle install
+RUN bundle install --without production
 COPY . /app
