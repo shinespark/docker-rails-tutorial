@@ -1,4 +1,11 @@
-%h1= class_name + "#" + @action
+%h1 Sample App
 
 %p
-  = @greeting + ", find me in app/views/user_mailer/account_activation.html.haml"
+  Hi
+  = @user.name
+  ,
+
+%p
+  Welcome to the Sample App!Click on the link below to activate your account:
+
+= link_to 'Activate', edit_account_activation_url(@user.activation_token, email: @user.email)
