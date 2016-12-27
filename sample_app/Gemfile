@@ -30,6 +30,11 @@ gem 'bootstrap-sass'
 gem 'faker'
 gem 'haml-rails'
 
+# upload images
+gem 'carrierwave'
+gem 'fog'
+gem 'mini_magick'
+
 # paginate
 gem 'bootstrap-will_paginate'
 gem 'will_paginate'
