@@ -1,31 +1,58 @@
+AllCops:
+  DisplayCopNames: true
+  Exclude:
+    - 'vendor/**/*'
+    - 'db/schema.rb'
+
 Rails:
   Enabled: true
+
+Rails/HttpPositionalArguments:
+  Enabled: false
+
+Rails/RequestReferer:
+  EnforcedStyle: referrer
 
 # Limit lines to 80 characters.
 Metrics/LineLength:
   Enabled: false
+
 # Can non-ascii comments.
 Style/AsciiComments:
   Enabled: false
+
+# allow Hoge::Fuge
 Style/ClassAndModuleChildren:
   Enabled: false
+
 Style/ColonMethodCall:
   Enabled: false
+
+# allow non docs.
 Style/Documentation:
   Enabled: false
+
 Style/EmptyLinesAroundAccessModifier:
   Enabled: false
+
 Style/EmptyLinesAroundBlockBody:
   Enabled: false
+
 Style/EmptyLinesAroundClassBody:
   Enabled: false
+
 Style/EmptyMethod:
   Enabled: false
+
+# only over 1_000_000
 Style/NumericLiterals:
-  Enabled: false
+  MinDigits: 7
+
 Style/PercentLiteralDelimiters:
   Enabled: false
+
 Style/PredicateName:
   Enabled: false
+
 Style/StringLiterals:
   Enabled: false
